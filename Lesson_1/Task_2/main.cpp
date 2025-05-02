@@ -7,6 +7,7 @@ int main()
     double first_num;
     double second_num;
     int operation;
+    int result = 0;
     cout << "Input your first number for calculating" << endl;
     cin >> first_num;
     cout << "Which operation you want?\n1.+\n2.-\n3.*\n4./\n5.Rise to the power\n6.Square root\n";
@@ -17,26 +18,27 @@ int main()
     }
     switch (operation) {
     case 1:
-        cout << "Your result = " << first_num + second_num << endl;
+        result = first_num + second_num;
         break;
     case 2:
-        cout << "Your result = " << first_num - second_num << endl;
+        result = first_num - second_num;
         break;
     case 3:
-        cout << "Your result = " << first_num * second_num << endl;
+        result = first_num * second_num;
         break;
     case 4:
-        cout << "Your result = " << first_num / second_num << endl;
+        result = first_num / second_num;
         break;
     case 5:
-        cout << "Your result = " << pow(first_num, second_num) << endl;
+        result = pow(first_num, second_num);
         break;
     case 6:
-        cout << "Your result = " << sqrt(first_num) << endl;
+        result = sqrt(first_num);
         break;
     default:
         cout << "Unknown operation";
         break;
     }
+    cout << "Your result = " << result << endl;
     return 0;
 }
